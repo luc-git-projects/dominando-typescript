@@ -1,1 +1,1 @@
-{"version":3,"file":"type_inference.js","sourceRoot":"","sources":["../scripts/type_inference.ts"],"names":[],"mappings":";AAAA,IAAM,SAAS,GAAG,YAAY,CAAC;AAC/B,OAAO,CAAC,GAAG,CAAC,SAAS,CAAC,CAAA"}
+{"version":3,"file":"type_inference.js","sourceRoot":"","sources":["../scripts/type_inference.ts"],"names":[],"mappings":";AAAA,IAAI,SAAS,GAAG,YAAY,CAAC;AAE7B,OAAO,CAAC,GAAG,CAAC,SAAS,CAAC,CAAA;AAGtB,mBAAmB;AAEnB,mCAAmC;AAEnC,OAAO,CAAC,GAAG,CAAC,SAAS,CAAC,iBAAiB,EAAE,CAAC,CAAC"}
