@@ -1,7 +1,7 @@
 "use strict";
-var nome1 = "Luciano";
-var nome2 = "Carlos";
-var nome3;
+let nome1 = "Luciano";
+let nome2 = "Carlos";
+let nome3;
 nome3 = "José";
 nome3 = "Andre";
 console.log(nome1);
