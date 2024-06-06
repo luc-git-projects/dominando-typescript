@@ -42,6 +42,7 @@ console.log(cnpj.mostrarCNPJ());
 /**
  * Acessa o private do TypeScript de qualquer jeito
  */
+//,
 //console.log(rg.valor);
 /**
  * Não acessao private do ECMAScript da erro
