@@ -1,4 +1,4 @@
-import { mostrarMensagem} from "./funcoes/mostrarMensagem";
+import  mostrarMensagem from "./funcoes/mostrarMensagem";
 import { showMessageString } from "./funcoes/showMessageString";
 import { showMessageNumberArrowFunction } from "./funcoes/showMessageNumberArrowFunction";
 
