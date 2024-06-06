@@ -4,12 +4,12 @@ interface Modelo{
     updateAt: number
 }
 
-interface Pessoa extends Modelo{
+interface IPessoa extends Modelo{
     id:number;
     idade?: number;
 }
 
-interface Usuario extends Pessoa{
+interface Usuario extends IPessoa{
     nome: string;
     email: string;
     senha: string;
@@ -23,6 +23,6 @@ const joao: Usuario = {
     senha: "senha",
     idade: 20,
     created_at: new Date().getTime(),
-    updateAt: new Date().getTime();
+    updateAt: new Date().getTime()
 }
 
