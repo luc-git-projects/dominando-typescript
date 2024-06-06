@@ -1,10 +1,4 @@
-interface IBancoDedados{
-    ip: string;
-    usuario: string;
-    senha: string;
-    tipoBanco: string;
-}
-
+import { IBancoDedados } from "./interfaces/IBancoDeDados";
 export class BancoDeDados{
 
     static LOCAL = "127.0.0.1";
