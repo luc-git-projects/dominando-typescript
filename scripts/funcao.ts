@@ -1,21 +1,11 @@
-function mostrarMensagem(texto: string): boolean{
-
-    console.log(texto);
-    return true;
-}
+import { mostrarMensagem, show, show2 } from "./funcoes/mostrarMensagem";
 
 
 console.log(mostrarMensagem("Hcode"))
 
 
-/**
- * arrow function
- */
+console.log(show("100"));
 
-function show(codigo: string): string{
-    return codigo;
-}
+console.log(show2(50));
 
-const show2 = (codigo: number) =>{
-    return codigo;
-}
+
