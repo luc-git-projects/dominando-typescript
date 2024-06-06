@@ -1,11 +1,13 @@
-import { mostrarMensagem, show, show2 } from "./funcoes/mostrarMensagem";
+import { mostrarMensagem} from "./funcoes/mostrarMensagem";
+import { showMessageString } from "./funcoes/showMessageString";
+import { showMessageNumberArrowFunction } from "./funcoes/showMessageNumberArrowFunction";
 
 
 console.log(mostrarMensagem("Hcode"))
 
 
-console.log(show("100"));
+console.log(showMessageString("100"));
 
-console.log(show2(50));
+console.log(showMessageNumberArrowFunction(50));
 
 
