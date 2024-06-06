@@ -1,3 +1,5 @@
+import Notificacao from "./notificacao/classes/Notificacao";
+
 interface IEmailV2{
     nome: string;
     email: string;
@@ -33,7 +35,7 @@ class EmailV2 extends Notificacao implements INotificacaoV2, IEmailV2{
         this.nome = usuario.nome;
         this.email = usuario.email;
     }
-    enviar(): boolean {
+    enviar(p0: { nome: string; email: string; telefone: string; }): boolean {
         console.log(`Eviando e-mail para o usuario ${this.email}`);
         return true;
     }
@@ -41,14 +43,14 @@ class EmailV2 extends Notificacao implements INotificacaoV2, IEmailV2{
 }
 
 
-class SMSV2 extends NotificacaoV2 implements INotificacaoV2, ItelefoneV2{
+class SMSV2 extends Notificacao implements INotificacaoV2, ItelefoneV2{
     numero: string;
 
     constructor(usuario:UsuarioV2){
         super();
         this.numero = usuario.telefone;
     }
-    enviar(): boolean {
+    enviar(p0: { nome: string; email: string; telefone: string; }): boolean {
         console.log(`Eviando SMS para o usuario ${this.numero}...`);
         return true;
     }
@@ -61,14 +63,14 @@ let usuarioV2: UsuarioV2 = {
     telefone: "983839421"
 }
 const notificacao3 = new EmailV2(usuarioV2);
-notificacao1.enviar({
+notificacao3.enviar({
     nome: "Luciano",
     email: "luciano@hcode.com.br",
     telefone: "983839421"
 });
 
 const notificacao4 = new SMSV2(usuarioV2);
-notificacao2.enviar({
+notificacao4.enviar({
     nome: "Otávia",
     email: "otavia@hcode.com.br",
     telefone: "98426584526"
