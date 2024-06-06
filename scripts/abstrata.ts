@@ -2,6 +2,7 @@ interface Usuario2{
     nome: string;
     email: string;
     telefone: string;
+    idAndroid?: string
 }
 
 abstract class Notificacao{

@@ -3,6 +3,10 @@ interface IEmailV2{
     email: string;
 }
 
+interface ItelefoneV2{
+    numero: string;
+}
+
 interface INotificacaoV2{
     enviar(usuario: UsuarioV2): boolean;
 }
@@ -14,36 +18,56 @@ interface UsuarioV2{
     idAndroid?: string
 }
 
-abstract class NotificacaoV2 implements INotificacaoV2{
+abstract class NotificacaoV2{
     
-    abstract enviar(usuario: Usuario2): boolean;
+    abstract enviar(): boolean;
 }
 
-class EmailV2 extends Notificacao{
-    enviar(usuario: Usuario2): boolean {
-        console.log(`Eviando e-mail para o usuario ${usuario.email}`);
+class EmailV2 extends Notificacao implements INotificacaoV2, IEmailV2{
+
+    nome: string;
+    email: string;
+
+    constructor(usuario:UsuarioV2){
+        super();
+        this.nome = usuario.nome;
+        this.email = usuario.email;
+    }
+    enviar(): boolean {
+        console.log(`Eviando e-mail para o usuario ${this.email}`);
         return true;
     }
     
 }
 
 
-class SMSV2 extends Notificacao{
-    enviar(usuario: Usuario2): boolean {
-        console.log(`Eviando SMS para o usuario ${usuario.telefone}...`);
+class SMSV2 extends NotificacaoV2 implements INotificacaoV2, ItelefoneV2{
+    numero: string;
+
+    constructor(usuario:UsuarioV2){
+        super();
+        this.numero = usuario.telefone;
+    }
+    enviar(): boolean {
+        console.log(`Eviando SMS para o usuario ${this.numero}...`);
         return true;
     }
     
 }
 
-const notificacao3 = new EmailV2();
+let usuarioV2: UsuarioV2 = {
+    nome: "Luciano",
+    email: "luciano@hcode.com.br",
+    telefone: "983839421"
+}
+const notificacao3 = new EmailV2(usuarioV2);
 notificacao1.enviar({
     nome: "Luciano",
     email: "luciano@hcode.com.br",
     telefone: "983839421"
 });
 
-const notificacao4 = new SMSV2();
+const notificacao4 = new SMSV2(usuarioV2);
 notificacao2.enviar({
     nome: "Otávia",
     email: "otavia@hcode.com.br",
