@@ -16,7 +16,7 @@ export = class BancoDeDados{
     }
 
     static factory(parametros: IBancoDedados){
-        
+
         return new BancoDeDados(parametros.ip, parametros.usuario, parametros.senha, parametros.tipoBanco );
     }
 }
