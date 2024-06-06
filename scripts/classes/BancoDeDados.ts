@@ -5,6 +5,7 @@ interface IBancoDedados{
     tipoBanco: string;
 }
 
+
 export = class BancoDeDados{
 
     static LOCAL = "127.0.0.1";
