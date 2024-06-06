@@ -5,8 +5,7 @@ interface IBancoDedados{
     tipoBanco: string;
 }
 
-
-export = class BancoDeDados{
+export class BancoDeDados{
 
     static LOCAL = "127.0.0.1";
     static TIPO_MYSQL = "MySql";

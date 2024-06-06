@@ -1,5 +1,5 @@
 
-const BancoDeDados = require("./classes/BancoDeDados");
+import { BancoDeDados } from "./classes/BancoDeDados";
 
 const conexaoBanco = BancoDeDados.factory({
     ip: BancoDeDados.TIPO_MYSQL,
