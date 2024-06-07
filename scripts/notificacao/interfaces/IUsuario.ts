@@ -1,4 +1,4 @@
-export default interface MeuUsuario{
+export interface IUsuario{
     nome: string;
     email: string;
     telefone: string;

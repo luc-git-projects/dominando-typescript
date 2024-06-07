@@ -1,7 +1,7 @@
-import MeuUsuario from "../interfaces/MeuUsuario";
+import { IUsuario } from "../interfaces/IUsuario";
 
 
 export default abstract class Notificacao{
     
-    abstract enviar(usuario: MeuUsuario): boolean;
+    abstract enviar(usuario: IUsuario): boolean;
 }
