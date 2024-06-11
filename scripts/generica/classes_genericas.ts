@@ -29,7 +29,7 @@ abstract class Entidade{
     toString(): string{
         return `ID: ${this._id}, 
         Criado em: ${this._createdAt.getUTCDay()}/${this._createdAt.getUTCMonth() + 1}/${this._createdAt.getUTCFullYear()}, 
-        Atualizado em: ${this._updatedAt.getUTCDay()}/${this._updatedAt.getUTCMonth() + 1}/${this._updatedAt.getUTCFullYear()}\n`;
+        Atualizado em: ${this._updatedAt.getUTCDay()}/${this._updatedAt.getUTCMonth() + 1}/${this._updatedAt.getUTCFullYear()}`;
     }
 }
 
